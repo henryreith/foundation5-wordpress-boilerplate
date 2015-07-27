@@ -1,0 +1,59 @@
+// Custom SASS For Foundation
+// http://henryreith.co
+// Licensed under MIT Open Source
+
+//
+// General Utilities Add-on
+//
+
+@import '../foundation/components/global'; 
+
+$include-html-type-classes: $include-html-classes !default; 
+
+/* Default header styles */
+@if $include-html-type-classes {
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+      color: $header-font-color;
+      font-family: $header-font-family;
+      font-style: $header-font-style;
+      font-weight: $header-font-weight;
+      line-height: $header-line-height;
+      margin-bottom: $header-bottom-margin;
+      margin-top: $header-top-margin;
+      text-rendering: $header-text-rendering;
+
+      small {
+        color: $small-font-color;
+        font-size: $small-font-size;
+        line-height: 0;
+      }
+    }
+
+    .h1 { font-size: $h1-font-size - $h1-font-reduction; }
+    .h2 { font-size: $h2-font-size - $h2-font-reduction; }
+    .h3 { font-size: $h3-font-size - $h3-font-reduction; }
+    .h4 { font-size: $h4-font-size - $h4-font-reduction; }
+    .h5 { font-size: $h5-font-size - $h5-font-reduction; }
+    .h6 { font-size: $h6-font-size - $h6-font-reduction; }
+
+	@media #{$medium-up} {
+      .h1, .h2, .h3, .h4, .h5, .h6 { line-height: $header-line-height; }
+      .h1 { font-size: $h1-font-size; }
+      .h2 { font-size: $h2-font-size; }
+      .h3 { font-size: $h3-font-size; }
+      .h4 { font-size: $h4-font-size; }
+      .h5 { font-size: $h5-font-size; }
+      .h6 { font-size: $h6-font-size; }
+    }
+	
+	.subheader { @include subheader; }
+}
+
+.small{
+	font-size: $small-font-size;
+}
+////////////// End Custom Helper Classes
+	
+
+	
+// Project Specific

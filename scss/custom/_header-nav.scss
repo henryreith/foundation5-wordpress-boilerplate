@@ -1,0 +1,31 @@
+// Custom SASS For Foundation
+// http://henryreith.co
+// Licensed under MIT Open Source
+
+// @import 'global';
+
+//
+// Header Nav Area
+//
+
+/* 
+header#main-header{
+	margin-bottom: 1.563rem;
+	border-bottom: 1px solid $white-smoke;
+}
+.page header#main-header{
+	border-bottom: none;
+} */
+
+// Logo
+#navlogo{
+	height:rem-calc(35);
+	@media #{$medium-up} { height:rem-calc(50); }
+}
+
+.navcta a{
+	background: $primary-color !important;
+	color: $white-smoke !important;
+	
+	
+}

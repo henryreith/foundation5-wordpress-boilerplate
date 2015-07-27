@@ -1,0 +1,30 @@
+// Custom SASS For Foundation
+// http://henryreith.co
+// Licensed under MIT Open Source
+
+// @import 'global';
+
+//
+// Footer Area
+//
+
+// Main Footer Area
+/*
+#footer-main{
+	.footer-widget{
+		margin-bottom: rem-calc(20);
+	}
+	ul{
+		  margin: 0 !important;
+	}
+	li{
+		  list-style-type: none;
+	}
+} */
+
+// Second (copywrite) Footer Area
+#footer-copy{
+	p{
+		margin: 0;
+	}
+}
