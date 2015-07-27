@@ -55,7 +55,7 @@
 // $rem-base: 16px;
 
 // Allows the use of rem-calc() or lower-bound() in your settings
-@import 'functions';
+@import 'foundation/functions';
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
@@ -79,7 +79,7 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-grid-classes: $include-html-classes;
 // $include-xl-html-grid-classes: false;
 
-$row-width: rem-calc(1170);
+// $row-width: rem-calc(1000);
 // $total-columns: 12;
 // $column-gutter: rem-calc(30);
 
@@ -87,20 +87,19 @@ $row-width: rem-calc(1170);
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-// $font-family-sans-serif: 'PT Sans', sans-serif;
-$font-family-sans-serif: 'Lato', sans-serif;
+// $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
-$font-weight-normal: normal;
-$font-weight-bold: bold;
+// $font-weight-normal: normal;
+// $font-weight-bold: bold;
 
-$white       : #FFFFFF;
-$ghost       : #FAFAFA;
-$snow        : #F9F9F9;
+// $white       : #FFFFFF;
+// $ghost       : #FAFAFA;
+// $snow        : #F9F9F9;
 // $vapor       : #F6F6F6;
-$white-smoke : #F5F5F5;
+// $white-smoke : #F5F5F5;
 // $silver      : #EFEFEF;
 // $smoke       : #EEEEEE;
 // $gainsboro   : #DDDDDD;
@@ -108,19 +107,17 @@ $white-smoke : #F5F5F5;
 // $base        : #AAAAAA;
 // $aluminum    : #999999;
 // $jumbo       : #888888;
-$monsoon     : #777777;
+// $monsoon     : #777777;
 // $steel       : #666666;
-$charcoal    : #555555;
+// $charcoal    : #555555;
 // $tuatara     : #444444;
-$oil         : #333333;
+// $oil         : #333333;
 // $jet         : #222222;
 // $black       : #000000;
-$transparent	: transparent;
 
 // We use these as default colors throughout
-$primary-color: #226ea5;
+// $primary-color: #008CBA;
 // $secondary-color: #e7e7e7;
-$secondary-color: #1cb2a1; 
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
@@ -129,7 +126,6 @@ $secondary-color: #1cb2a1;
 // We use these to control various global styles
 // $body-bg: $white;
 // $body-font-color: $jet;
-$body-font-color: $monsoon;
 // $body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
@@ -144,7 +140,7 @@ $body-font-color: $monsoon;
 // $last-child-float: $opposite-direction;
 
 // We use these to make sure border radius matches unless we want it different.
-$global-radius: 3px;
+// $global-radius: 3px;
 // $global-rounded: 1000px;
 
 // We use these to control inset shadow shiny edges and depressions.
@@ -155,13 +151,13 @@ $global-radius: 3px;
 // d. Media Query Ranges
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-$small-breakpoint:  em-calc(640);
-$medium-breakpoint: em-calc(1024);
+// $small-breakpoint:  em-calc(640);
+// $medium-breakpoint: em-calc(1024);
 // $large-breakpoint:  em-calc(1440);
 // $xlarge-breakpoint: em-calc(1920);
 
 // $small-range:   (0, $small-breakpoint);
-$medium-range:  ($small-breakpoint  + em-calc(1), $medium-breakpoint);
+// $medium-range:  ($small-breakpoint  + em-calc(1), $medium-breakpoint);
 // $large-range:   ($medium-breakpoint + em-calc(1), $large-breakpoint);
 // $xlarge-range:  ($large-breakpoint  + em-calc(1), $xlarge-breakpoint);
 // $xxlarge-range: ($xlarge-breakpoint + em-calc(1), em-calc(99999999));
@@ -214,8 +210,8 @@ $medium-range:  ($small-breakpoint  + em-calc(1), $medium-breakpoint);
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-$header-font-family: 'PT Sans', sans-serif;;
-$header-font-weight: $font-weight-bold;
+// $header-font-family: $body-font-family;
+// $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
 // $header-font-color: $jet;
 // $header-line-height: 1.4;
@@ -247,13 +243,13 @@ $header-font-weight: $font-weight-bold;
 // $subheader-bottom-margin: .5rem;
 
 // A general <small> styling
-$small-font-size: 80%;
+// $small-font-size: 60%;
 // $small-font-color: scale-color($header-font-color, $lightness: 35%);
 
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: $font-weight-normal;
-$paragraph-font-size: 1.125rem;
+// $paragraph-font-size: 1rem;
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);
@@ -340,6 +336,7 @@ $paragraph-font-size: 1.125rem;
 // $accordion-navigation-bg-color: $silver;
 // $accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%);
 // $accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -3%);
+// $accordion-navigation-active-font-color: $jet;
 // $accordion-navigation-font-color: $jet;
 // $accordion-navigation-font-size: rem-calc(16);
 // $accordion-navigation-font-family: $body-font-family;
@@ -657,7 +654,7 @@ $paragraph-font-size: 1.125rem;
 // $input-focus-border-color: scale-color($white, $lightness: -40%);
 // $input-border-style: solid;
 // $input-border-width: 1px;
-$input-border-radius: $global-radius; 
+// $input-border-radius: $global-radius;
 // $input-disabled-bg: $gainsboro;
 // $input-disabled-cursor: $cursor-default-value;
 // $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
@@ -1401,33 +1398,33 @@ $input-border-radius: $global-radius;
 // 34. Top Bar
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-$include-html-top-bar-classes: $include-html-classes;
+// $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: $transparent;
-$topbar-bg: $topbar-bg-color;
+// $topbar-bg-color: $oil;
+// $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-$topbar-height: rem-calc(76);
+// $topbar-height: rem-calc(45);
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: $font-weight-normal;
-$topbar-title-font-size: rem-calc(18);
+// $topbar-title-font-size: rem-calc(17);
 
 // Set the link colors and styles for top-level nav
-$topbar-link-color: $oil;
-$topbar-link-color-hover: $oil;
-$topbar-link-color-active: $oil;
-$topbar-link-color-active-hover: $oil;
+// $topbar-link-color: $white;
+// $topbar-link-color-hover: $white;
+// $topbar-link-color-active: $white;
+// $topbar-link-color-active-hover: $white;
 // $topbar-link-weight: $font-weight-normal;
-$topbar-link-font-size: rem-calc(18);
+// $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
-$topbar-link-bg-hover: $snow;
+// $topbar-link-bg-hover: $jet;
 // $topbar-link-bg-color-hover: $charcoal;
-$topbar-link-bg-active: $snow;
-$topbar-link-bg-active-hover: scale-color($snow, $lightness: -14%);
+// $topbar-link-bg-active: $primary-color;
+// $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;
 // $topbar-link-text-transform: none;
 // $topbar-link-padding: ($topbar-height / 3);
@@ -1437,27 +1434,28 @@ $topbar-link-bg-active-hover: scale-color($snow, $lightness: -14%);
 // $topbar-button-top: 7px;
 
 // Style the top bar dropdown elements
-$topbar-dropdown-bg: $white;
-$topbar-dropdown-link-color: $oil;
+// $topbar-dropdown-bg: $oil;
+// $topbar-dropdown-link-color: $white;
 // $topbar-dropdown-link-color-hover: $topbar-link-color-hover;
-$topbar-dropdown-link-bg: $white;
-$topbar-dropdown-link-bg-hover: $ghost;
+// $topbar-dropdown-link-bg: $oil;
+// $topbar-dropdown-link-bg-hover: $jet;
 // $topbar-dropdown-link-weight: $font-weight-normal;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: $white;
 // $topbar-dropdown-toggle-alpha: .4;
+
 // $topbar-dropdown-label-color: $monsoon;
 // $topbar-dropdown-label-text-transform: uppercase;
 // $topbar-dropdown-label-font-weight: $font-weight-bold;
 // $topbar-dropdown-label-font-size: rem-calc(10);
-$topbar-dropdown-label-bg: $white;
+// $topbar-dropdown-label-bg: $oil;
 
 // Top menu icon styles
 // $topbar-menu-link-transform: uppercase;
 // $topbar-menu-link-font-size: rem-calc(13);
 // $topbar-menu-link-weight: $font-weight-bold;
-$topbar-menu-link-color: $oil;
-$topbar-menu-icon-color: $oil;
+// $topbar-menu-link-color: $white;
+// $topbar-menu-icon-color: $white;
 // $topbar-menu-link-color-toggled: $jumbo;
 // $topbar-menu-icon-color-toggled: $jumbo;
 // $topbar-menu-icon-position: $opposite-direction; // Change to $default-float for a left menu icon
@@ -1465,7 +1463,7 @@ $topbar-menu-icon-color: $oil;
 // Transitions and breakpoint styles
 // $topbar-transition-speed: 300ms;
 // Using rem-calc for the below breakpoint causes issues with top bar
-$topbar-breakpoint: #{upper-bound($medium-range)}; // Change to 9999px for always mobile layout
+// $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
 // $topbar-media-query: "#{$screen} and (min-width:#{lower-bound($topbar-breakpoint)})";
 
 // Top-bar input styles
@@ -1477,7 +1475,7 @@ $topbar-breakpoint: #{upper-bound($medium-range)}; // Change to 9999px for alway
 
 // Sticky Class
 // $topbar-sticky-class: ".sticky";
-$topbar-arrows: false; //Set false to remove the triangle icon from the menu item
+// $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
 // $topbar-dropdown-arrows: true; //Set false to remove the \00bb >> text from dropdown subnavigation li//
 
 // 36. Visibility Classes
